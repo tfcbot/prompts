@@ -1,4 +1,4 @@
-# Systematic Debugging Protocol
+# Systematic Debugging Guide
 
 When facing a complex bug or issue, follow this structured debugging approach before making code changes:
 

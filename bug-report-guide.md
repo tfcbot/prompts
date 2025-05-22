@@ -1,6 +1,6 @@
-# Bug Report Protocol for AI Agents
+# Bug Report Guide for AI Agents
 
-When analyzing software bugs, follow this protocol to create comprehensive reports that identify root causes and explore potential solutions before implementing any code changes.
+When analyzing software bugs, follow this Guide to create comprehensive reports that identify root causes and explore potential solutions before implementing any code changes.
 
 ## 1. Issue Description
 1. Clearly describe the observed behavior versus expected behavior
