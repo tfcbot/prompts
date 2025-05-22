@@ -1,8 +1,3 @@
----
-description:
-globs:
-alwaysApply: false
----
 # Systematic Debugging Protocol
 
 When facing a complex bug or issue, follow this structured debugging approach before making code changes:
