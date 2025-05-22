@@ -1,0 +1,70 @@
+title: Systematic Debugging Protocol
+
+description: >
+  When faced with a complex bug or issue, structure your thinking through these phases 
+  before making any code changes.
+
+phases:
+  - name: PROBLEM ANALYSIS
+    questions:
+      - What is the exact behavior we're observing?
+      - How does this differ from expected behavior?
+      - Is this reproducible? Under what conditions?
+      - What part of the system is likely responsible?
+      - What recent changes might have introduced this issue?
+
+  - name: CONTEXT GATHERING
+    questions:
+      - What is the broader system architecture?
+      - Which components interact with the problematic area?
+      - What external dependencies are involved?
+      - Are there environment-specific factors to consider?
+      - What patterns or anti-patterns might be relevant?
+
+  - name: HYPOTHESIS FORMATION
+    instructions:
+      - List potential root causes in order of likelihood
+      - Consider:
+        - State management issues
+        - Race conditions or timing problems
+        - Resource constraints or leaks
+        - Configuration mismatches
+        - Error handling gaps
+        - Edge cases not accounted for
+      - Challenge assumptions about how the code "should" work
+
+  - name: INVESTIGATION STRATEGY
+    steps:
+      - Determine the most efficient path to validate/eliminate each hypothesis
+      - Plan your investigation step-by-step
+      - Identify what information would conclusively prove or disprove each theory
+      - Consider instrumentation needs (logging, monitoring, breakpoints)
+      - Prepare a minimal test case if possible
+
+  - name: SOLUTION DESIGN
+    considerations:
+      - Before implementation:
+        - How precisely will the proposed fix address the root cause?
+        - What could break as a result of this change?
+        - Are there cleaner alternatives?
+        - Does this fix mask deeper issues?
+      - Design with maintainability and future debugging in mind
+
+  - name: VERIFICATION PLANNING
+    questions:
+      - How will you confirm the issue is resolved?
+      - What tests need to be run?
+      - What monitoring should be in place?
+      - What could indicate partial fixes or new issues?
+
+  - name: KNOWLEDGE INTEGRATION
+    questions:
+      - What patterns can be extracted from this issue?
+      - How could similar issues be prevented?
+      - What documentation or tests should be added?
+      - What would make future debugging easier?
+
+conclusion: >
+  Before writing any code, explicitly walk through your reasoning in each of these areas. 
+  This structured thinking minimizes false starts, prevents symptom-treating, and builds 
+  a comprehensive understanding of the problem space.
